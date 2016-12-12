@@ -46,7 +46,7 @@ We can see that `my_bike` is able to have different data than `your_bike`. Chang
 
 ### Review: What is MVC?
 
-[]()
+![MVC Diagram](https://github.com/ga-wdi-pvd/activerecord-intro/blob/master/mvc_diagram.png)
 
 ### Information Dive (5 / 10)
 
@@ -582,6 +582,7 @@ Review Learning Objectives
 - [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html)
 - [Active Record Query Interface](http://guides.rubyonrails.org/active_record_querying.html)
 - [GA WD ActiveRecord Lesson](https://github.com/ga-wdi-lessons/activerecord-intro)
+- [TopTal Rails Components](https://www.toptal.com/ruby-on-rails/decoupling-rails-components)
 
 ### Appendix
 
