@@ -118,7 +118,7 @@ Make sure to review our domain model for tunr
 We want to be able to do CRUD for these models with Active Record. We'll be going into greater detail about how we are going to use Active Record as an interface between our server and our database, but to start, the first thing that we want to do is create/setup a database.
 
 ```bash
-$ git clone git@github.com:ga-wdi-exercises/tunr-active-record.git
+$ git clone git@github.com:ga-wdi-pvd/tunr-active-record.git
 $ cd tunr-active-record
 $ bundle install
 $ createdb tunr_db
@@ -336,7 +336,7 @@ kanye.destroy
 
 ### Methods - Tunr (You Do (In Pry!) - 15 / 90)
 
-[Part 1.3 - Use Your Artist Model](https://github.com/ga-wdi-exercises/tunr-active-record#part-13---use-your-artist-model)
+[Part 1.3 - Use Your Artist Model](https://github.com/ga-wdi-pvd/tunr-active-record#part-13---use-your-artist-model)
 
 ## Associations
 
@@ -426,9 +426,9 @@ require_relative "models/song"
 
 ### Updating Class Definitions - Tunr (You Do - 5 / 115)
 
-[Part 1.2 - Create Your Song Model / Setup Associations](https://github.com/ga-wdi-exercises/tunr-active-record#part-12---create-your-song-model--setup-associations)
+[Part 1.2 - Create Your Song Model / Setup Associations](https://github.com/ga-wdi-pvd/tunr-active-record#part-12---create-your-song-model--setup-associations)
 
-[solution code](https://github.com/ga-wdi-exercises/tunr-active-record/archive/v1.2.zip)
+[solution code](https://github.com/ga-wdi-pvd/tunr-active-record/archive/v1.2.zip)
 
 ### Association Helper Methods - Tunr (I Do - 10 / 125)
 
@@ -495,7 +495,7 @@ beatles.songs.create(title: "Hey Jude", album: "Beatles Chillout (Vol. 1)")
 
 ### Association Helper Methods - Tunr (You Do - 10 / 135)
 
-[Part 1.5 - Use Your Model Assocations](https://github.com/ga-wdi-exercises/tunr-active-record#part-15---use-your-model-associations)
+[Part 1.5 - Use Your Model Assocations](https://github.com/ga-wdi-pvd/tunr-active-record#part-15---use-your-model-associations)
 
 ### Seeding a Database - Tunr (I Do - 10 / 145)
 Seeding a database is not all that different from the things we've been doing today. What's the purpose of seed data? **(ST-WG)**
@@ -555,6 +555,7 @@ Review Learning Objectives
 ### Resources
 - [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html)
 - [Active Record Query Interface](http://guides.rubyonrails.org/active_record_querying.html)
+- [GA WD ActiveRecord Lesson](https://github.com/ga-wdi-lessons/activerecord-intro)
 
 ### Appendix
 
