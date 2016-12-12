@@ -15,6 +15,39 @@
 
 Think about what we have learned so far in this unit. We now have a way to persist data in a database. We've also learned about how OOP allows us to programmatically represent real things as objects in ruby. Which is AWESOME! But really databases just seems like data in this kind of cryptic place on our local computer.  We have to make super long SQL statements to do CRUD. It'd be really nice if we had some kind of way to interface between the database and our servers/applications in order to streamline this process. Enter ORM's.
 
+### Review: What are Objects?
+
+Everything in Ruby is an object. Objects are created from classes. You can think of classes as blueprints for objects: What should the object be made of, and what should it do? Individual objects, or instances of a class, contain different pieces of information from other objects, yet they share the same class:
+
+```
+class Bike
+  attr_accessor :size
+  
+  def initialize(size)
+    @size = size
+  end
+  
+  def size_to_s
+    "#{size}cm"
+  end
+end
+```
+
+```
+my_bike = Bike.new(59)
+your_bike = Bike.new(61)
+```
+What will be the outcome of my_bike.class?
+What will be the outcome of Bike.superclass?
+
+The ability of one class to gain the properties and methods of another is known as:
+
+We can see that `my_bike` is able to have different data than `your_bike`. Changing the `size` property of one object does not change the other. which is an example of one of the four major Object Oriented principles, called:
+
+### Review: What is MVC?
+
+[]()
+
 ### Information Dive (5 / 10)
 
 For the next 5 minutes, research what ORM's are.
