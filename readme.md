@@ -1,12 +1,5 @@
 # Active Record
 
-## Screen Casts for code
-- [Part 1](https://youtu.be/wbAPxnuIXck)
-- [Part 2](https://youtu.be/J9w1CDXrOXc)
-- [Part 3](https://youtu.be/NQNBnmpG5tE)
-- [Part 4](https://youtu.be/EkD5LEyALvM)
-- [Part 5](https://youtu.be/VOH26fAzc4o)
-
 ## Learning Objectives
 
 - Define the term `ORM` and why we use it over a database language.
@@ -583,3 +576,10 @@ Review Learning Objectives
 |argument for has_many| snake case and plural|
 |argument for belongs_to| snake case and singular|
 |more to follow....|||
+
+## Screen Casts for code
+- [Part 1](https://youtu.be/wbAPxnuIXck)
+- [Part 2](https://youtu.be/J9w1CDXrOXc)
+- [Part 3](https://youtu.be/NQNBnmpG5tE)
+- [Part 4](https://youtu.be/EkD5LEyALvM)
+- [Part 5](https://youtu.be/VOH26fAzc4o)
