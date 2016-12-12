@@ -4,6 +4,7 @@
 
 - Define the term `ORM` and why we use it over a database language.
 - Explain what Active Record is and what problems it solves.
+- Explain why you would create a Model (in the MVC sense) that does not use AR
 - Explain convention over configuration and how it relates to Active Record
 - Define a class that inherits from AR
 - Utilize AR to perform CRUD actions on a database
@@ -13,7 +14,7 @@
 
 ## Framing (5 / 5)
 
-Think about what we have learned so far in this unit. We now have a way to persist data in a database. We've also learned about how OOP allows us to programmatically represent real things as objects in ruby. Which is AWESOME! But really databases just seems like data in this kind of cryptic place on our local computer.  We have to make super long SQL statements to do CRUD. It'd be really nice if we had some kind of way to interface between the database and our servers/applications in order to streamline this process. Enter ORM's.
+Think about what we have learned so far in this unit. We now have a way to persist data in a database. We've also learned about how OOP allows us to programmatically represent real things as objects in ruby. Which is AWESOME! But really databases just seems like data in this kind of cryptic place on our local computer.  We have to make super long SQL statements to do CRUD. But do we really want those ugly SQL statements littered about our code? What happens if we want to reuse some of those SQL queries? Can database access be more object oriented? It'd be really nice if we had some kind of way to interface between the database and our servers/applications in order to streamline this process. Enter ORM's.
 
 ### Review: What are Objects?
 
@@ -82,7 +83,61 @@ It just so happens you will be learning one of the best ORM's on the market. It 
 
 > Active Record is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic. Active Record facilitates the creation and use of business objects whose data requires persistent storage to a database. It is an implementation of the Active Record pattern which itself is a description of an Object Relational Mapping system. - Taken from AR docs
 
-## Active Record
+### Why ActiveRecord?
+http://guides.rubyonrails.org/active_record_querying.html
+
+ActiveRecord (AR) is: 
+ - a layer on top of your database that interfaces with Ruby
+ - The M in MVC
+ - The layer responsible for representing business data and logic
+
+But, why should we use AR over just a plain ruby object?
+ - AR facilitates the creation and use of objects whose data requires persistent storage to a DB. 
+ - If it doesn’t require a DB, just create a PORO (Plan Old Ruby Object).
+
+### Research: The ActiveRecord Pattern
+ - Take 5 minutes and research the ActiveRecord pattern: https://en.wikipedia.org/wiki/Active_record_pattern
+ - What other patterns are out there? Discuss one or two with your pods (Hint: Google for Martin Fowler)
+
+ >The AR object that implements the AR pattern will have functions that allow for CRUD, plus properties that conform to the database tables
+
+For example, a foreign key relationship is represented as an object instance of the appropriate type via a property
+```
+class Owner
+  has_one :cat
+  
+  def name
+    "Bill"
+  end
+end
+
+class Cat
+  belongs_to :owner
+end
+
+# in the console:
+cat = Cat.new
+cat.owner
+=> {Owner, name: "Bill"}
+```
+
+AR adds methods to your object, such as `save()`, and makes your objects ready for interfacing with the database. If you do not need your object to interface with the database, you may not need to be inheriting from ActiveRecord! It's not a law that all models (especially in Rails) must inherit from ActiveRecord, but that is a choice you can make when you get there.
+
+  >If you're used to using raw SQL to find database records, then you will generally find that there are better ways to carry out the same operations in Rails. Active Record insulates you from the need to use SQL in most cases.
+- pretty opinionated statement
+- definitely some truth:
+ - instead of writing long raw SQL, use more readable, shorter AR sytax
+
+ > Active Record will perform queries on the database for you and is compatible with most database systems, including MySQL, MariaDB, PostgreSQL and SQLite. Regardless of which database system you're using, the Active Record method format will always be the same.
+ - AR provides database agnostic schema management via migrations, which allows your program to does be tied down to a specific db. It does not matter which back end you are using for a database when you use AR migrations.
+
+
+## Active Record, in the Ruby sense
+
+ActiveRecord is a ruby gem, written by none other than David Heinemeier Hansson (creator of Rails): https://rubygems.org/gems/activerecord/versions/5.0.0.1
+- Check out the gem source [here](https://github.com/rails/rails/tree/master/activerecord)
+
+- Go ahead and install the activerecord gem
 
 For you to use Active Record to write ruby which manipulates data, we need to be able to talk about the **models** of our data.
 
