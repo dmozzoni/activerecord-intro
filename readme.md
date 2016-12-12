@@ -37,12 +37,13 @@ end
 my_bike = Bike.new(59)
 your_bike = Bike.new(61)
 ```
-What will be the outcome of my_bike.class?
-What will be the outcome of Bike.superclass?
+What will be the outcome of `my_bike.class`?
 
-The ability of one class to gain the properties and methods of another is known as:
+What will be the outcome of `Bike.superclass`?
 
-We can see that `my_bike` is able to have different data than `your_bike`. Changing the `size` property of one object does not change the other. which is an example of one of the four major Object Oriented principles, called:
+The ability of one class to gain the properties and methods of another is known as _____
+
+We can see that `my_bike` is able to have different data than `your_bike`. Changing the `size` property of one object does not change any other object's `size` property. This is an example of one of the four major Object Oriented principles, called _____
 
 ### Review: What is MVC?
 
